@@ -19,11 +19,12 @@ public class Board {
 
     public void printBoard()
     {
-        for(Room[] i : map)
+        String cell = "j";
+        for(int i = 0; i < map.length; i++)
         {
-            for (Room j : i)
+            for (int k = 0; k < map.length; k++)
             {
-                System.out.print(j);
+                System.out.print(cell);
             }
             System.out.println();
         }

@@ -49,18 +49,22 @@ public class Runner {
         int y = (int)(Math.random()*building.length);
         building[x][y] = new WinningRoom(x, y);
 
+
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
         building[0][0].enterRoom(player1);
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
-            System.out.println("Where would you like to move? (Choose N, S, E, W)");
+            System.out.println("Where would you like to move? (Choose N, S, E, W). Type 'map' to check the map.");
             String move = in.nextLine();
             if(validMove(move, player1, building))
             {
                 System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
-
+            }
+            if(move.equals("map"))
+            {
+                System.out.println(new Board(building));
             }
             else {
                 System.out.println("Please choose a valid move.");
