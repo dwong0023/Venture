@@ -2,14 +2,13 @@ package Rooms;
 
 import People.Person;
 
-public class Room {
+public class fightRoom extends Room {
     Person occupant;
     int xLoc,yLoc;
 
-    public Room(int x, int y)
+    public fightRoom(int x, int y)
     {
-        xLoc = x;
-        yLoc = y;
+        super(x, y);
     }
 
     /**
@@ -18,7 +17,7 @@ public class Room {
      */
     public void enterRoom(Person x)
     {
-        System.out.println("You venture deeper into the forest. There is no imminent danger here.");
+        System.out.println("You have entered a forest clearing. You can use this time to use items, bond with your teammates, or move on.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);

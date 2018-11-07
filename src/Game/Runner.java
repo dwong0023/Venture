@@ -1,8 +1,7 @@
 package Game;
 
 import People.Person;
-import Rooms.Room;
-import Rooms.WinningRoom;
+import Rooms.*;
 
 import java.util.Scanner;
 
@@ -24,8 +23,26 @@ public class Runner {
             }
         }
 
-        int j = (int)(Math.random()*building.length);
-        int k = (int)(Math.random()*building.length);
+        for(int i = 0; i < 8;i++)
+        {
+            int j = (int) (Math.random() * building.length);
+            int k = (int) (Math.random() * building.length);
+            building[j][k] = new forestClearing(j, k);
+        }
+
+        for(int i = 0; i < 15;i++)
+        {
+            int j = (int) (Math.random() * building.length);
+            int k = (int) (Math.random() * building.length);
+            building[j][k] = new fightRoom(j, k);
+        }
+
+        for(int i = 0; i < 5;i++)
+        {
+            int j = (int) (Math.random() * building.length);
+            int k = (int) (Math.random() * building.length);
+            building[j][k] = new treasureRoom(j, k);
+        }
 
         //Create a random winning room.
         int x = (int)(Math.random()*building.length);
