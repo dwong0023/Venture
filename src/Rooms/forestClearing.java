@@ -7,6 +7,12 @@ public class forestClearing extends Room {
     Person occupant;
     int xLoc,yLoc;
     int petbond = 0;
+    String str = "clearing";
+
+    public String getStr()
+    {
+        return this.str;
+    }
     //petbond can I use it from another class without passing it somewhere
 
     public forestClearing(int x, int y)

@@ -12,7 +12,7 @@ public class Runner {
 
     public static void main(String[] args)
     {
-        Room[][] building = new Room[5][5];
+        Room[][] building = new Room[8][8];
 
         //Fill the building with normal rooms
         for (int x = 0; x<building.length; x++)
@@ -58,13 +58,15 @@ public class Runner {
         {
             System.out.println("Where would you like to move? (Choose N, S, E, W). Type 'map' to check the map.");
             String move = in.nextLine();
+
+            if(move.equals("map"))
+            {
+            new Board(building).printBoard(player1);
+            }
+
             if(validMove(move, player1, building))
             {
                 System.out.println("Your coordinates: row = " + player1.getxLoc() + " col = " + player1.getyLoc());
-            }
-            if(move.equals("map"))
-            {
-                System.out.println(new Board(building));
             }
             else {
                 System.out.println("Please choose a valid move.");

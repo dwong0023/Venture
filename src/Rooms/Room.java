@@ -4,7 +4,14 @@ import People.Person;
 
 public class Room {
     Person occupant;
-    int xLoc,yLoc;
+    int xLoc;
+    int yLoc;
+    String str = "nothing";
+
+    public String getStr()
+    {
+        return this.str;
+    }
 
     public Room(int x, int y)
     {

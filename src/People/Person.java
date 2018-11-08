@@ -6,7 +6,8 @@ package People;
 public class Person {
     String firstName;
     String familyName;
-    int xLoc, yLoc;
+    public int xLoc;
+    public int yLoc;
 
 
     public int getxLoc() {

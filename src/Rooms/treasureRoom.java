@@ -5,6 +5,12 @@ import People.Person;
 public class treasureRoom extends Room {
     Person occupant;
     int xLoc,yLoc;
+    String str = "treasure";
+
+    public String getStr()
+    {
+        return this.str;
+    }
 
     public treasureRoom(int x, int y)
     {

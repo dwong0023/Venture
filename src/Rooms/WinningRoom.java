@@ -6,10 +6,15 @@ import java.util.Scanner;
 
 public class WinningRoom extends Room
 {
+    String str = "win";
+
+    public String getStr()
+    {
+        return this.str;
+    }
 
     public WinningRoom(int x, int y) {
         super(x, y);
-
     }
 
     /**
